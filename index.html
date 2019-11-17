@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <h1>HELLO WORLD</h1>
+    <p> </p>
+    <script>
+        fetch("http://127.0.0.1:3000/",{
+            headers: {
+                'Access-Control-Allow-Origin': "*",
+                "Content-Type": "text/plain"
+            },
+            "mode": "no-cors"
+        })
+            .then(response => {
+                console.log(response)
+                return response
+            })
+            .then(data => {
+                console.log(data)
+            })
+            .catch(err => console.log(err))
+    </script>
+</body>
+</html>
